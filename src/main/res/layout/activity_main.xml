@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#507FC3E1"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <EditText
+
+        android:id="@+id/edit_text"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="请输入本机ip地址…"
+        android:maxLength="40" />
+
+    <Button
+        android:id="@+id/btn_take_photo_zu"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:text="主视图拍照上传" />
+
+    <Button
+        android:id="@+id/btn_take_photo_fu"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:text="俯视图拍照上传" />
+
+    <Button
+        android:id="@+id/btn_take_photo_ce"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:text="侧视图拍照上传" />
+
+    <Button
+        android:id="@+id/btn_take_photo_biaochi"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:text="含标尺图拍照上传" />
+
+    <ImageView
+        android:id="@+id/img_picture"
+        android:layout_width="120dp"
+        android:layout_height="180dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#333"
+        android:text="暂未上传图片"/>
+
+    <Button
+        android:id="@+id/btn_show_image_zu"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:text="点击查看主视图图片" />
+
+    <Button
+        android:id="@+id/btn_show_image_fu"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:text="点击查看俯视图图片" />
+
+    <Button
+        android:id="@+id/btn_show_image_ce"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:text="点击查看侧视图图片" />
+
+    <Button
+        android:id="@+id/btn_show_image_biaochi"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:text="点击查看图片" />
+
+
+</LinearLayout>
