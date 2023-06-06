@@ -94,6 +94,7 @@ public class MainActivity extends FragmentActivity {
         btnTakePhotobiaochi = findViewById(R.id.btn_take_photo_biaochi);
         imgPicture = findViewById(R.id.img_picture);
 
+
         tvType = findViewById(R.id.tv_type);
         btnShowImagezu = findViewById(R.id.btn_show_image_zu);
         btnShowImagefu = findViewById(R.id.btn_show_image_fu);
