@@ -78,6 +78,7 @@ public class MainActivity extends FragmentActivity {
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("_yyyyMMdd_");
     String date = localDate.format(formatter);
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,6 +94,7 @@ public class MainActivity extends FragmentActivity {
         btnTakePhotoce = findViewById(R.id.btn_take_photo_ce);
         btnTakePhotobiaochi = findViewById(R.id.btn_take_photo_biaochi);
         imgPicture = findViewById(R.id.img_picture);
+
 
 
         tvType = findViewById(R.id.tv_type);
