@@ -263,7 +263,6 @@ public class MeasureActivity_ce extends AppCompatActivity {
                             String SubPath = Path.substring(7);//取出正确的photopath
 //                            new TakePhotoHelper().selectPhoto(callback);//使用该方法要在拍照后进行相册图片选择
                             Bitmap bmp = BitmapFactory.decodeFile(SubPath);
-                            MainActivity.imgPicture.setImageBitmap(bmp);
                             //根据本地图片位置，将图片上传至服务器
                             showTypeDialog(SubPath);
                         }
@@ -424,7 +423,6 @@ public class MeasureActivity_ce extends AppCompatActivity {
         public void onTakePhotoSucceed(@NonNull String photoPath, @Nullable Bitmap thumbImage) {
             // 拿到所选择的照片 显示到界面上 然后弹出选择类型弹窗
             Bitmap bmp = BitmapFactory.decodeFile(photoPath);
-            MainActivity.imgPicture.setImageBitmap(bmp);
             showTypeDialog(photoPath);
         }
 
@@ -457,7 +455,7 @@ public class MeasureActivity_ce extends AppCompatActivity {
 
     @RequiresApi(api = VERSION_CODES.O)
     void uploadFile(String filePath, int type) {
-        EditText editText = MainActivity.editText;
+        EditText editText = MainActivity2.editText;
         String ip_Local = editText.getText().toString();
         // 定义接口链接
 //        String apiUrl = "";
@@ -532,7 +530,7 @@ public class MeasureActivity_ce extends AppCompatActivity {
                     public void run() {
                         if (response.isSuccessful()) {
                             uploadType = type;
-                            MainActivity.tvType.setText("点击下方按钮查看结果");
+                            MainActivity2.tvType.setText("点击下方按钮查看结果");
                             Toast.makeText(MeasureActivity_ce.this, "上传成功", Toast.LENGTH_LONG).show();
                         } else {
                             Toast.makeText(MeasureActivity_ce.this, "上传失败：" + response.message(), Toast.LENGTH_LONG).show();

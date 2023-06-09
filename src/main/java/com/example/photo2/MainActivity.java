@@ -1,9 +1,8 @@
 package com.example.photo2;
 
 import android.app.ProgressDialog;
-//import android.net.IpConfiguration;
-
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Build;
@@ -12,9 +11,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.ImageView;
-import android.content.Intent;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -25,7 +23,6 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 
 import com.example.photo2.take_photo.TakePhotoHelper;
-import com.example.photo2.take_photo.TakePhotoEmptyFragment;
 
 import java.io.File;
 import java.io.IOException;
@@ -148,31 +145,11 @@ public class MainActivity extends FragmentActivity {
 //            }
 //        });
 
-        btnShowImagezu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                /// 点击查看图片
-                Intent intent = new Intent(MainActivity.this, ShowImageActivity_zu.class);
-//                intent.putExtra("url",uploadUrl);
-                startActivity(intent);
-            }
-        });
-
-        btnShowImagefu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                /// 点击查看图片
-                Intent intent = new Intent(MainActivity.this, ShowImageActivity_fu.class);
-//                intent.putExtra("url",uploadUrl);
-                startActivity(intent);
-            }
-        });
-
         btnShowImagece.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 /// 点击查看图片
-                Intent intent = new Intent(MainActivity.this, ShowImageActivity_ce.class);
+                Intent intent = new Intent(MainActivity.this, ShowImageActivity_arcore.class);
 //                intent.putExtra("url",uploadUrl);
                 startActivity(intent);
             }

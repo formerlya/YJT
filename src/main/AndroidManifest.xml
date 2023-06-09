@@ -3,13 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.photo2">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
 
     <uses-feature
         android:name="android.hardware.camera.ar"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="true"/>
+    <uses-feature
+        android:name="android.hardware.camera"
         android:required="true" />
 
     <application
@@ -23,18 +33,32 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="29">
         <activity
+            android:name=".ArcoreActivity"
+            android:launchMode="singleTask"
+            android:exported="true" />
+        <activity
+            android:name=".BiaochiActivity"
+            android:launchMode="singleTask"
+            android:exported="true" />
+        <activity
             android:name=".MeasureActivity_zu"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MeasureActivity_ce"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MeasureActivity_fu"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
 
+        <activity
+            android:name="com.wildma.idcardcamera.camera.CameraActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"/>
 
         <meta-data
             android:name="com.google.ar.core"
@@ -44,12 +68,11 @@
             android:name="org.apache.http.legacy"
             android:required="false" />
 
-        <activity android:name=".ShowImageActivity_zu" />
-        <activity android:name=".ShowImageActivity_fu" />
-        <activity android:name=".ShowImageActivity_ce" />
+        <activity android:name=".ShowImageActivity_arcore" />
         <activity android:name=".ShowImageActivity_biaochi" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivity2"
+            android:launchMode="singleTask"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -57,6 +80,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
 
         <provider
             android:name="androidx.core.content.FileProvider"

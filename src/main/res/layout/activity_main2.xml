@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#507FC3E1"
+    android:gravity="center"
+    tools:context=".MainActivity2">
+
+    <EditText
+
+        android:id="@+id/edit_text"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="请输入本机ip地址…"
+        android:maxLength="40" />
+
+    <Button
+        android:id="@+id/btn_biaochi"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:text="移动标尺方法" />
+
+    <Button
+        android:id="@+id/btn_arcore"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:text="增强现实方法" />
+
+
+</LinearLayout>

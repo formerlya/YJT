@@ -26,7 +26,7 @@ public class ShowImageActivity_biaochi extends Activity {
     private void initView() {
         image = findViewById(R.id.imagebiaochi);
         String base64 = null;
-        base64 = MainActivity.uploadUrlbiaochi;
+        base64 = BiaochiActivity.uploadUrlbiaochi;
         byte[] decodedString = Base64.decode(base64, Base64.DEFAULT);
         Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
         image.setImageBitmap(decodedByte);

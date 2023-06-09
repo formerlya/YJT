@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#507FC3E1"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".BiaochiActivity">
+
+
+    <Button
+        android:onClick="click_banjin"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:text="板筋检测" />
+
+    <Button
+        android:id="@+id/btn_dingtu"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:text="顶突检测" />
+
+    <Button
+        android:id="@+id/btn_gubao"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:text="鼓包检测" />
+
+    <Button
+        android:id="@+id/btn_dibuliu"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:text="底部瘤检测" />
+
+    <Button
+        android:id="@+id/btn_liewen"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:text="裂纹检测" />
+
+    <Button
+        android:id="@+id/btn_feibian"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:text="飞边毛刺" />
+
+    <Button
+        android:id="@+id/btn_dangbian"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:text="荡边检测" />
+
+    <Button
+        android:id="@+id/btn_ear"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:text="耳部检测" />
+
+    <Button
+        android:id="@+id/btn_thick"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:text="侧边检测" />
+
+    <Button
+        android:id="@+id/btn_face"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:text="面部检测" />
+
+    <Button
+        android:id="@+id/btn_biaochiresult"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#002a80"
+        android:text="查看结果" />
+
+    <ImageView
+        android:id="@+id/banjin"
+        android:layout_width="195dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter" />
+
+</LinearLayout>

@@ -8,20 +8,11 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
 
 
-import com.example.photo2.MainActivity.*;
-
 import java.time.format.DateTimeFormatter;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.math.MathContext;
-import android.app.Application;
+
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.ProgressDialog;
@@ -29,7 +20,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.media.Image;
 import android.os.Build;
 import android.os.Handler;
@@ -44,34 +34,20 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.PixelCopy;
-import android.view.View.MeasureSpec;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.Canvas;
 
 import com.example.photo2.take_photo.TakePhotoHelper;
-import com.google.ar.core.*;
 import com.google.ar.core.Anchor;
-import com.google.ar.core.Frame;
 import com.google.ar.core.HitResult;
 import com.google.ar.core.Plane;
-import com.google.ar.core.Point;
-import com.google.ar.core.Pose;
-import com.google.ar.core.exceptions.NotYetAvailableException;
 import com.google.ar.sceneform.AnchorNode;
 import com.google.ar.sceneform.ArSceneView;
-import com.google.ar.sceneform.ArSceneView;
-import com.google.ar.sceneform.math.Vector3;
 import com.google.ar.sceneform.rendering.ModelRenderable;
-import com.google.ar.sceneform.rendering.ShapeFactory;
 import com.google.ar.sceneform.ux.ArFragment;
 import com.google.ar.sceneform.ux.TransformableNode;
 
@@ -497,7 +473,6 @@ public class MeasureActivity extends AppCompatActivity {
         public void onTakePhotoSucceed(@NonNull String photoPath, @Nullable Bitmap thumbImage) {
             // 拿到所选择的照片 显示到界面上 然后弹出选择类型弹窗
             Bitmap bmp = BitmapFactory.decodeFile(photoPath);
-            MainActivity.imgPicture.setImageBitmap(bmp);
             showTypeDialog(photoPath);
         }
 
@@ -530,7 +505,7 @@ public class MeasureActivity extends AppCompatActivity {
     }
     @RequiresApi(api = VERSION_CODES.O)
     void uploadFile(String filePath, int type) {
-        EditText editText = MainActivity.editText;
+        EditText editText = MainActivity2.editText;
         String ip_Local = editText.getText().toString();
         // 定义接口链接
 //        String apiUrl = "";
